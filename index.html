@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbTAcLvLmH5bkQna7H4SKUs4yn27wqvXhuTfmQ-QE894XgbpDGgQ" type="image/gif" sizes="16x16">
+    <!-- Bootstrap Lib -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+    h1 {
+        padding-top: 10px; 
+        padding-left: 10px;
+        font-family: Cambria;
+        text-align: center;
+    }
+    h2 {
+        font-family: Cambria;
+    }
+
+    label {
+        padding-right: 5px;
+    }
+    div {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    hr.style5 {
+	    background-color: #fff;
+	    border-top: 2px dashed #8c8b8b;
+    }
+    </style>
+    <script data-main="scripts/app" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+    
+</head>
+<body>
+        <h1>TypeScript Assessment</h1>
+    <br>
+        <hr class="style5">
+    <br>
+    <div class="container">
+        <h2>Problem 1:</h2>
+        <blockquote class="blockquote">
+        <p>Write a program to list all even nunbers less than or equal to the number n, 
+            The value of n is given through from input field or from the prompt.</p>
+        </blockquote>
+        <form class="form-inline" action="/action_page.php">
+            <label for="number">Number :</label>
+            <input type="number" class="form-control" style="width: 30%" id="n" placeholder="Enter a number" name="number">
+            <div></div>
+            <button type="button" class="btn btn-primary" onclick="problem1();">Submit</button>
+        </form>
+        <div id="result1"></div>
+    </div>
+    <br>
+        <hr class="style5">
+    <br>
+    <div class="container">
+        <h2>Problem 2:</h2>
+        <blockquote class="blockquote">
+        <p>Create an array of integer by reading values from the user, Display the sum and average of the integers.
+            Also, Display the Number of values less than the average.
+        </p>
+        </blockquote>
+        <form class="form-inline" onsubmit="problem2();return false;">
+            <label for="array">Array :</label>
+            <input type="text" pattern="([0-9][,]?)+" style="width: 30%" class="form-control" id="array" 
+            placeholder="Enter comma saparated numbers" name="array" title="Only numeric values are valid">
+            <div></div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="result2"></div>
+    </div>
+    <br>
+        <hr class="style5">
+    <br>
+    <div class="container">
+        <h2>Problem 3:</h2>
+        <blockquote class="blockquote">
+        <p>write a program that accept a number in the range of 1 to 50 from the prompt, it then compares the numbers 
+           against a single diminsion array of five integer elements ranging in values from 1 to 50, The program displays 
+           the message <B>BINGO</B> once the given input is found in the array.
+        </p>
+        </blockquote>
+        <form class="form-inline" >
+            <label for="email">Number :</label>
+            <input type="number" class="form-control" style="width: 30%" id="num" placeholder="Enter a number" name="number">
+            <div></div>
+            <button type="button" class="btn btn-primary" onclick="problem3()">Submit</button>
+        </form>
+        <div id="result3"></div>
+    </div>
+    <br>
+        <hr class="style5">
+    <br>
+    <div class="container" style="padding-bottom: 120px">
+            <h2>Problem 4:</h2>
+            <blockquote class="blockquote">
+            <p>A set of 5 words is given write a program to reverse each word and arrange resulting words in alphabetical
+                order.
+            </p>
+            </blockquote>
+            <form class="form-inline" onsubmit="problem4(); return false;">
+                <label for="word">Word Array :</label>
+                <input type="text" pattern="([A-Za-z][,]?)+" class="form-control" id="word" style="width: 30%"
+                 placeholder="Enter comma saparated alphabetic words" name="word" title="only words having alpabetic characters">
+                <div></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="result4"></div>
+        </div>
+<script>
+
+var problem1 = function () {
+    require(['app'], function (app) {
+        var appModule = app.AppModule.BootstrapApplication;
+        new appModule().executeSolution1();
+    });
+};
+var problem2 = function () {
+    require(['app'], function (app) {
+        var appModule = app.AppModule.BootstrapApplication;
+        new appModule().executeSolution2();
+    });
+};
+var problem3 = function () {
+    require(['app'], function (app) {
+        var appModule = app.AppModule.BootstrapApplication;
+        new appModule().executeSolution3();
+    });
+};
+ var problem4 = function () {
+    require(['app'], function (app) {
+        var appModule = app.AppModule.BootstrapApplication;
+        new appModule().executeSolution4();
+    });
+};
+</script>
+</body>
+</html>
